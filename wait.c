@@ -1,4 +1,3 @@
-julien@ubuntu:~/c/shell$ cat wait.c
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
