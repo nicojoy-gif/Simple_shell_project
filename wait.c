@@ -32,8 +32,3 @@ int main(void)
     }
     return (0);
 }
-julien@ubuntu:~/c/shell$ gcc -Wall -Wextra -Werror -pedantic wait.c -o wait
-julien@ubuntu:~/c/shell$ ./wait 
-Wait for me, wait for me
-Oh, it's all better now
-julien@ubuntu:~/c/shell$ 
