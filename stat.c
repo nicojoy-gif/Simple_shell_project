@@ -1,4 +1,3 @@
-julien@ubuntu:~/c/shell$ cat stat.c
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
