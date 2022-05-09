@@ -22,4 +22,4 @@ printf("Error while forking\n");
 exit(EXIT_FAILURE);
 }
 return 0;
-}
+
