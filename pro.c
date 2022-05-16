@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
-#include "main.h"
+#include "shell.h"
 /**
  * main - check the code
  *
