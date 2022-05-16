@@ -91,33 +91,40 @@ environment_t *_parsingEnvironment(char *prmEnvironmentName)
 	return (environmentList);
 }
 /**
- * _strtok - split a string
- *
- * @prmString:
- * @prmSeparators:
- *
- * Return: First occurence
+ * strtok - split the string
+ * @str: character used
+ * @delim: integer used
+ * Return: success
  */
-/*char *_strtok_r(char *str, const char *delim, char **saveptr)
+char *strtok(char *str, const char *delim)
 {
-	int cLoop = 0, cLoop2 = 0;
-	char *token = "";
-	if (prmString == NULL && prmSavePtr == NULL)
+	static char *remember = NULL;
+	int string_length = 0;
+	int i = 0;
+	int search_hit=0;
+
+	if((str == NULL) && (remember == NULL))
 		return (NULL);
-	if (prmString != NULL)
+	if(str == NULL)
+		str = remember;
+	string_length = strlen(str) + 1;
+	for(i = 0;i < string_length;i++)
 	{
-		while (prmString[cLoop] != '\0')
+		if(str[i] == delim[0])
 		{
-			while(prmSeparators[cLoop2] != '\0')
-			{
-				if (prmString[cLoop] == prmSeparators[cLoop2])
-				{
-					_strncat(token, prmString, cLoop);
-					return (token);
-				}
-				cLoop2++;
-			}
-			cLoop++;
+	search_hit = 1 ;
+	break;
 		}
 	}
-}*/
+	if(search_hit != 1)
+	{
+		remember = NULL;
+		return (str);
+	}
+	str[i] = '\0';
+	if((str + i + 1) != NULL)
+		remember = str + i + 1;
+	else
+		remember = NULL;
+	return (str);
+}
