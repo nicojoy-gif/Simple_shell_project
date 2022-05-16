@@ -1,16 +1,13 @@
-#include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <errno.h>
+#include "shell.h"
+#include "builtins"
 /**
- * setenv - set environment variable
+ * _setenv - set environment variable
  * @name: character used
  * @value: character used
  * @overwrite: integer used
  * Return: success
  */
-int setenv(const char *name, const char *value, int overwrite)
+int _setenv(const char *name, const char *value, int overwrite)
 {
 	if (name == NULL || name[0] == '\0' || strchr(name, '=') != NULL || value == NULL)
 	{
