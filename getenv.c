@@ -3,7 +3,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
-#include main.h
+#include shell.h
 
 /**
  * _getenv - get environmental variable
