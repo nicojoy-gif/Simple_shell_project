@@ -1,5 +1,5 @@
-#ifndef _ALIAS_H
-#define _ALIAS_H_
+#ifndef ALIAS_H
+#define ALIAS_H_
 
 #include "dict.h"
 #include "types.h"
