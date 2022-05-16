@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+#include "shell.h"
 #include <stddef.h>
 #include <errno.h>
 #include <stdint.h>
