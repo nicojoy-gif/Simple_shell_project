@@ -4,29 +4,25 @@
 #include <string.h>
 #include <errno.h>
 /**
- * unsetenv - deletes the variable name from environment
+ * _unsetenv - deletes the variable name from environment
  * @name: character used
  * Return: 0;
  */
-int unsetenv(const char *name)
+int _unsetenv(const char *name)
 {
-	extern char **environ;
+	char **args = name->tokens + 1;
 
-	if (name == NULL || name[0] == '\0' || strchr(name, '=') != NULL)
+	if (*args)
 	{
-		errno = EINVAL;
-		return (-1);
+		while (*args)
+			del_dict_node(&name->env, *args++);
+		name->status = EXIT_SUCCESS;
 	}
-	size_t len = strlen(name);
-	for (char **ep = environ; *ep != NULL; )
-		if (strncmp(*ep, name, len) == 0 && (*ep)[len] == '=')
-		{
-			for (char **sp = ep; *sp != NULL; sp++)
-				*sp = *(sp + 1);
-		}
-		else
-		{
-			ep++;
-		}
-	return (0);
+	else
+	{
+		perrorl("Too few arguments.", *name->tokens, NULL);
+		name->status = EXIT_FAILURE;
+	}
+	return (name->status);
 }
+	
