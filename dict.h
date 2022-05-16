@@ -1,5 +1,5 @@
-#ifndef _DICT_H_
-#define _DICT_H_
+#ifndef DICT_H_
+#define DICT_H_
 
 #include <stdlib.h>
 
