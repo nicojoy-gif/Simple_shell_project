@@ -1,10 +1,7 @@
 #include "shell.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <errno.h>
+#include "builtins.h"
 /**
- * _unsetenv - deletes the variable name from environment
+ * _unsetenv - unsets the variable name from environment
  * @name: character used
  * Return: 0;
  */
