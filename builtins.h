@@ -1,5 +1,5 @@
-#ifndef _BUILTINS_H_
-#define _BUILTINS_H_
+#ifndef BUILTINS_H_
+#define BUILTINS_H_
 
 #include <limits.h>
 #include <stdlib.h>
@@ -93,7 +93,7 @@ int __exec(info_t *info);
 int __exit(info_t *info);
 int __help(info_t *info);
 int __history(info_t *info);
-int __setenv(info_t *info);
-int __unsetenv(info_t *info);
+int _setenv(const char *name, const char *value, int overwrite)
+int _unsetenv(const char *name)
 
 #endif /* _BUILTINS_H_ */
