@@ -1,31 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@nicojoy-gif 
-Succynice
-/
-simple_shell
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-simple_shell/aux_error0.c
-@Succynice
-Succynice pr
-Latest commit da378af 2 days ago
- History
- 1 contributor
-144 lines (129 sloc)  2.96 KB
-   
 #include "main.h"
 
 /**
@@ -170,16 +142,3 @@ char *error_exit_shell(data_shell *datash)
 
 	return (error);
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
