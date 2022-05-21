@@ -34,7 +34,7 @@ return (i + 1);
 char *_getenv(const char *name, char **_environ)
 {
 char *ptr_env;
-nt i, mov;
+int i, mov;
 
 /* Initialize ptr_env value */
 ptr_env = NULL;
